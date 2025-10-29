@@ -1,0 +1,142 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    padding: 3rem 1rem 2rem;
+    gap: 2rem;
+    margin: 0;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+.pokemons-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    user-select: none;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    padding: .5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: 0.3s ease-in-out;
+}
+
+.pokemon:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.pokemon .number {
+    align-self: flex-end;
+    opacity: 0.3;
+}
+
+.pokemon-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-container {
+    width: 80px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/pokeball-bg.png) no-repeat center / 190%;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.pokemon-details img {
+    max-height: 100%;
+    image-rendering: auto;
+    z-index: 2;
+}
+
+.pokemon-details .types {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.type {
+    padding: .5rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 0.625rem;
+    filter: brightness(1.1);
+}
+
+.load-more-btn {
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--buttons);
+    color: var(--container-background);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem .8rem;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.load-more-btn:hover {
+    background-color: var(--buttons-hover);
+}
+
+@media screen and (max-width: 350px) {
+    .pokemons-list {
+        grid-template-columns: 1fr;       
+    }
+
+    .pokemon {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .pokemons-list {
+        grid-template-columns: repeat(3, 1fr);       
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pokemons-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .pokemon {
+        padding: .7rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        margin: auto;
+        background: rgb(245, 245, 245);
+        border-radius: 1rem;
+        box-shadow: 0 0 3px rgb(128, 128, 128);
+    }
+}

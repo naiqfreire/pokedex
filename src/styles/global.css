@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --body-background: linear-gradient(rgb(246, 248, 252), rgb(216, 222, 231));
+    --container-background: #FFFFFF;
+    --buttons: #673AB7;
+    --buttons-hover: #512DA8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    line-height: 1.5;
+    background: var(--body-background);
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Types */
+
+.normal {
+    background-color: #BDBDA2;
+}
+
+.fire {
+    background-color: #D97751;
+}
+
+.water {
+    background-color: #89A9D9;
+}
+
+.grass {
+    background-color: #91B37D;
+}
+
+.electric {
+    background-color: #E3C669;
+}
+
+.ice {
+    background-color: #B3D5D5;
+}
+
+.fighting {
+    background-color: #B05B54;
+}
+
+.poison {
+    background-color: #A46DA4;
+}
+
+.ground {
+    background-color: #D1B478;
+}
+
+.flying {
+    background-color: #A8C5D9;
+}
+
+.psychic {
+    background-color: #DE7C9A;
+}
+
+.bug {
+    background-color: #B5C04A;
+}
+
+.rock {
+    background-color: #BDA877;
+}
+
+.ghost {
+    background-color: #8879A4;
+}
+
+.dragon {
+    background-color: #8865D1;
+}
+
+.dark {
+    background-color: #8B7D72;
+}
+
+.steel {
+    background-color: #B3B3C2;
+}
+
+.fairy {
+    background-color: #E3B5C1;
+}
+
+/* Types End */
